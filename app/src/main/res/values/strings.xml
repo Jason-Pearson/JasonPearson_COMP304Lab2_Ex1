@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lab2_Ex1</string>
+    <string name="cuisine1">American</string>
+    <string name="cuisine2">Chinese</string>
+    <string name="cuisine3">Mexican</string>
+    <string name="cuisine4">Indian</string>
+    <string name="cuisine5">Korean</string>
+</resources>
