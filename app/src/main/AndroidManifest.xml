@@ -19,8 +19,6 @@
         <activity android:name=".DisplayAmericanActivity" />
         <activity android:name=".DisplayChineseActivity" />
         <activity android:name=".DisplayMexicanActivity" />
-        <activity android:name=".DisplayIndianActivity" />
-        <activity android:name=".DisplayKoreanActivity"></activity>
     </application>
 
 </manifest>

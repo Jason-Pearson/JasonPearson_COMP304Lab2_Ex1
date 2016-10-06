@@ -1,8 +1,57 @@
 <resources>
     <string name="app_name">Lab2_Ex1</string>
+    <string name="icon_info">Restaurant Application by Jason Pearson</string>
+
     <string name="cuisine1">American</string>
     <string name="cuisine2">Chinese</string>
     <string name="cuisine3">Mexican</string>
-    <string name="cuisine4">Indian</string>
-    <string name="cuisine5">Korean</string>
+
+    <string name="welcomeText">READY TO PLACE YOUR ORDER?</string>
+    <string name="cuisineText">Pick your preferred cuisine?</string>
+    <string name="enterButton">ENTER</string>
+    <string name="popupButton">NEXT</string>
+
+    <string name="rest_Amer1">MacDonalds</string>
+    <string name="rest_Amer2">Burger King</string>
+    <string name="rest_Amer3">Wendys</string>
+
+    <string name="amer1_Food1">McMuffin</string>
+    <string name="amer1_Food2">Big Mac</string>
+    <string name="amer1_Food3">McNuggets</string>
+    <string name="amer2_Food1">Whopper</string>
+    <string name="amer2_Food2">Whopper Jr.</string>
+    <string name="amer2_Food3">Rodeo Burger</string>
+    <string name="amer3_Food1">Baconator</string>
+    <string name="amer3_Food2">Jr. Cheese Burger Deluxe</string>
+    <string name="amer3_Food3">5pc Nuggets</string>
+
+    <string name="rest_China1">Mandarin</string>
+    <string name="rest_China2">Lucky Lins</string>
+    <string name="rest_China3">House of Wong</string>
+
+    <string name="china1_Food1">Wonton Soup</string>
+    <string name="china1_Food2">Sushi Sampler</string>
+    <string name="china1_Food3">Black Pepper Steak Ho-Fen</string>
+    <string name="china2_Food1">Tai Dop Voy</string>
+    <string name="china2_Food2">Mixed Chow Mein</string>
+    <string name="china2_Food3">Singapore Noodles</string>
+    <string name="china3_Food1">Shop Suey Soup</string>
+    <string name="china3_Food2">Pad Thai Noodle</string>
+    <string name="china3_Food3">Moo Koo Har Lok</string>
+
+
+    <string name="rest_Mex1">Taco Bell</string>
+    <string name="rest_Mex2">Big Bite Burrito</string>
+    <string name="rest_Mex3">Sofis Mexican Bar and Grill</string>
+
+    <string name="mex1_Food1">Fiery Doritos Locos Tacos Supreme</string>
+    <string name="mex1_Food2">Cheddar Habanero Quesarito</string>
+    <string name="mex1_Food3">Nachos Supreme</string>
+    <string name="mex2_Food1">Jerk Chicken Burrito</string>
+    <string name="mex2_Food2">Tequila Chicken Burrito</string>
+    <string name="mex2_Food3">Special Burrito Bowl</string>
+    <string name="mex3_Food1">Ceviche</string>
+    <string name="mex3_Food2">Enchiladas de Pollo</string>
+    <string name="mex3_Food3">Tostada Vegetarianos Tacos</string>
+
 </resources>

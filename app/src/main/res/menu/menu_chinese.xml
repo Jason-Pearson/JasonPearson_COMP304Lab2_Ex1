@@ -1,0 +1,62 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content">
+
+    <item
+        android:id="@+id/one_Chinese"
+        android:title="@string/rest_China1">
+        <menu>
+            <item
+                android:id="@+id/one_Chinese_Food1"
+                android:title="@string/china1_Food1"
+                android:orderInCategory="1"/>
+            <item
+                android:id="@+id/one_Chinese_Food2"
+                android:title="@string/china1_Food2"
+                android:orderInCategory="2"/>
+            <item
+                android:id="@+id/one_Chinese_Food3"
+                android:title="@string/china1_Food3"
+                android:orderInCategory="3"/>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/two_Chinese"
+        android:title="@string/rest_China2">
+        <menu>
+            <item
+                android:id="@+id/two_Chinese_Food1"
+                android:title="@string/china2_Food1"
+                android:orderInCategory="1"/>
+            <item
+                android:id="@+id/two_Chinese_Food2"
+                android:title="@string/china2_Food2"
+                android:orderInCategory="2"/>
+            <item
+                android:id="@+id/two_Chinese_Food3"
+                android:title="@string/china2_Food3"
+                android:orderInCategory="3"/>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/three_Chinese"
+        android:title="@string/rest_China3">
+        <menu>
+            <item
+                android:id="@+id/three_Chinese_Food1"
+                android:title="@string/china3_Food1"
+                android:orderInCategory="1"/>
+            <item
+                android:id="@+id/three_Chinese_Food2"
+                android:title="@string/china3_Food2"
+                android:orderInCategory="2"/>
+            <item
+                android:id="@+id/three_Chinese_Food3"
+                android:title="@string/china3_Food3"
+                android:orderInCategory="3"/>
+        </menu>
+    </item>
+
+</menu>

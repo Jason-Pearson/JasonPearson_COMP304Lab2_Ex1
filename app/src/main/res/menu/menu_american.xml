@@ -1,0 +1,67 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:visibility="visible">
+
+    <item
+        android:id="@+id/one_American"
+        android:title="@string/rest_Amer1"
+        android:orderInCategory="1"
+        >
+        <menu>
+            <item
+                android:id="@+id/one_American_Food1"
+                android:title="@string/amer1_Food1"
+                android:orderInCategory="1"/>
+            <item
+                android:id="@+id/one_American_Food2"
+                android:title="@string/amer1_Food2"
+                android:orderInCategory="2"/>
+            <item
+                android:id="@+id/one_American_Food3"
+                android:title="@string/amer1_Food3"
+                android:orderInCategory="3"/>
+        </menu>
+        </item>
+
+    <item
+        android:id="@+id/two_American"
+        android:title="@string/rest_Amer2"
+        android:orderInCategory="2">
+        <menu>
+            <item
+                android:id="@+id/two_American_Food1"
+                android:title="@string/amer2_Food1"
+                android:orderInCategory="1"/>
+            <item
+                android:id="@+id/two_American_Food2"
+                android:title="@string/amer2_Food2"
+                android:orderInCategory="2"/>
+            <item
+                android:id="@+id/two_American_Food3"
+                android:title="@string/amer2_Food3"
+                android:orderInCategory="3"/>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/three_American"
+        android:title="@string/rest_Amer3"
+        android:orderInCategory="3">
+        <menu>
+            <item
+                android:id="@+id/three_American_Food1"
+                android:title="@string/amer3_Food1"
+                android:orderInCategory="1"/>
+            <item
+                android:id="@+id/three_American_Food2"
+                android:title="@string/amer3_Food2"
+                android:orderInCategory="2"/>
+            <item
+                android:id="@+id/three_American_Food3"
+                android:title="@string/amer3_Food3"
+                android:orderInCategory="3"/>
+        </menu>
+    </item>
+
+</menu>

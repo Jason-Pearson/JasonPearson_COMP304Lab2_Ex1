@@ -16,7 +16,7 @@
         android:textAllCaps="true"
         android:textAlignment="center"
         android:textSize="12pt"
-        android:text="Pick your preferred cuisine?" />
+        android:text="@string/cuisineText" />
 
     <RadioGroup
         android:id="@+id/cuisineRG"
@@ -49,31 +49,15 @@
             android:textSize="12pt"
             android:onClick="onRadioButtonClicked"
             />
-        <RadioButton
-            android:id="@+id/cuisineRB4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cuisine4"
-            android:textSize="12pt"
-            android:onClick="onRadioButtonClicked"
-            />
-        <RadioButton
-            android:id="@+id/cuisineRB5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/cuisine5"
-            android:textSize="12pt"
-            android:onClick="onRadioButtonClicked"
-            />
     </RadioGroup>
 
     <Button
         android:visibility="invisible"
-        android:id="@+id/NEXT1"
+        android:id="@+id/NEXT"
         android:translationY="25dp"
         android:layout_below="@id/cuisineRG"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NEXT"
+        android:text="@string/popupButton"
         android:onClick="Restaurants"/>
 </RelativeLayout>

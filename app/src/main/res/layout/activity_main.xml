@@ -16,23 +16,25 @@
         android:textAllCaps="true"
         android:textAlignment="center"
         android:textSize="12pt"
-        android:text="READY TO PLACE YOUR ORDER?" />
+        android:text="@string/welcomeText" />
     <ImageView
         android:layout_below="@id/message"
         android:id="@+id/logo"
+        android:contentDescription="@string/icon_info"
         android:layout_width="200pt"
         android:layout_height="200pt"
         android:src="@mipmap/logo"
         />
     <Button
         android:layout_below="@id/logo"
+        android:id="@+id/enterButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:scaleX="2"
         android:scaleY="2"
-        android:text="Enter"
+        android:text="@string/enterButton"
         android:onClick="Cuisines"/> <!--@string/button_send - same instance of String variable reference - for Strings.xml
         , onClick="sendMessage" - event handler for Send Button - on clicking the button make method call (sendMessage() method) from MainActivity.java
         , this method in Main Activity starts a new Activity, which carries over the message to another View (TextView) in this second Activity

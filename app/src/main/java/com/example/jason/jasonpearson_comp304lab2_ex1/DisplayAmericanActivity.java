@@ -17,8 +17,4 @@ public class DisplayAmericanActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display_american);
     }
 
-    protected boolean onCreateOptionMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.menuamerican, menu);
-        return true;
-    }
 }
