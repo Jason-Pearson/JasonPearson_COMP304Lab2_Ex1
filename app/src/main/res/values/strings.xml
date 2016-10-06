@@ -9,7 +9,8 @@
     <string name="welcomeText">READY TO PLACE YOUR ORDER?</string>
     <string name="cuisineText">Pick your preferred cuisine?</string>
     <string name="enterButton">ENTER</string>
-    <string name="popupButton">NEXT</string>
+    <string name="popupButton">SELECT</string>
+    <string name="customerButton">NEXT</string>
 
     <string name="rest_Amer1">MacDonalds</string>
     <string name="rest_Amer2">Burger King</string>

@@ -53,11 +53,23 @@
 
     <Button
         android:visibility="invisible"
-        android:id="@+id/NEXT"
+        android:clickable="false"
+        android:id="@+id/SELECT"
         android:translationY="25dp"
         android:layout_below="@id/cuisineRG"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/popupButton"
         android:onClick="Restaurants"/>
+    <Button
+        android:visibility="invisible"
+        android:clickable="false"
+        android:id="@+id/NEXT"
+        android:translationY="25dp"
+        android:translationX="100dp"
+        android:layout_alignBottom="@id/SELECT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/customerButton"
+        android:onClick="Customer"/>
 </RelativeLayout>

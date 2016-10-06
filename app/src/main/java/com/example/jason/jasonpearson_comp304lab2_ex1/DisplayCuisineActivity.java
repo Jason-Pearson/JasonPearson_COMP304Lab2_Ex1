@@ -3,19 +3,16 @@ package com.example.jason.jasonpearson_comp304lab2_ex1;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.support.annotation.IdRes;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Display;
 import android.view.KeyEvent;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.SubMenu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.PopupMenu;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 public class DisplayCuisineActivity extends AppCompatActivity {
 /*
@@ -30,12 +27,15 @@ public class DisplayCuisineActivity extends AppCompatActivity {
     //Creating the instance of PopupMenu
 
     //Creating menu item instances - in order for sub menu of food items - have to make xml file for sub menu or can you mak in here?
-
+    public boolean addItemIntent = false;
+    //Intent intent = new Intent(DisplayCuisineActivity.this, DisplayAmericanActivity.class);
+    //Intent intent = getIntent();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_display_cuisine);
+        //Intent intent = getIntent();
     }
 
     public void onRadioButtonClicked(View view) {
@@ -43,33 +43,53 @@ public class DisplayCuisineActivity extends AppCompatActivity {
         RadioButton rb2 = (RadioButton) findViewById(R.id.cuisineRB2);
         RadioButton rb3 = (RadioButton) findViewById(R.id.cuisineRB3);
 
+        Button select = (Button) findViewById(R.id.SELECT);
         Button next = (Button) findViewById(R.id.NEXT);
         // Check which radio button was clicked
         if (rb1.isChecked()) {
-            next.setVisibility(Button.VISIBLE);
+            next.setVisibility(Button.INVISIBLE);
+            select.setVisibility(Button.VISIBLE);
+            next.setClickable(false);
+            select.setClickable(true);
             Toast.makeText(this,"You chose American!", Toast.LENGTH_SHORT).show();
         } else if (rb2.isChecked()){
-            next.setVisibility(Button.VISIBLE);
+            next.setVisibility(Button.INVISIBLE);
+            select.setVisibility(Button.VISIBLE);
+            next.setClickable(false);
+            select.setClickable(true);
             Toast.makeText(this,"You chose Chinese!", Toast.LENGTH_SHORT).show();
         }else if (rb3.isChecked()) {
-            next.setVisibility(Button.VISIBLE);
+            next.setVisibility(Button.INVISIBLE);
+            select.setVisibility(Button.VISIBLE);
+            next.setClickable(false);
+            select.setClickable(true);
             Toast.makeText(this, "You chose Mexican!", Toast.LENGTH_SHORT).show();
         }
     }
 
-    public void Restaurants (View view) {
+    public void Restaurants (final View view) {
         RadioButton rb1 = (RadioButton) findViewById(R.id.cuisineRB1);
         RadioButton rb2 = (RadioButton) findViewById(R.id.cuisineRB2);
         RadioButton rb3 = (RadioButton) findViewById(R.id.cuisineRB3);
 
-        Button next = (Button) findViewById(R.id.NEXT);
-        final PopupMenu popup_American = new PopupMenu(DisplayCuisineActivity.this, next);
-        final PopupMenu popup_Chinese = new PopupMenu(DisplayCuisineActivity.this, next);
-        final PopupMenu popup_Mexican = new PopupMenu(DisplayCuisineActivity.this, next);
+        final Button select = (Button) findViewById(R.id.SELECT);
+        final Button next = (Button) findViewById(R.id.NEXT);
+
+        next.setVisibility(Button.INVISIBLE);
+        next.setClickable(false);
+        addItemIntent = false;
+
+        final PopupMenu popup_American = new PopupMenu(DisplayCuisineActivity.this, select);
+        final PopupMenu popup_Chinese = new PopupMenu(DisplayCuisineActivity.this, select);
+        final PopupMenu popup_Mexican = new PopupMenu(DisplayCuisineActivity.this, select);
 
         final MenuItem item_American1 = (MenuItem) findViewById(R.id.one_American);
         final MenuItem item_American2 = (MenuItem) findViewById(R.id.two_American);
         final MenuItem item_American3 = (MenuItem) findViewById(R.id.three_American);
+
+        final MenuItem food_American1_1 = (MenuItem) findViewById(R.id.one_American_Food1);
+        final MenuItem food_American1_2 = (MenuItem) findViewById(R.id.one_American_Food2);
+        final MenuItem food_American1_3 = (MenuItem) findViewById(R.id.one_American_Food3);
 
         final SubMenu food_American = new SubMenu() {
             @Override
@@ -241,7 +261,6 @@ public class DisplayCuisineActivity extends AppCompatActivity {
             //Intent intent = new Intent(this, DisplayAmericanActivity.class); // Intent - class object instance of class (Intent)- constructor takes two arguments (Context - this - for everything in the current Activity <Main>, Class - DisplayMessageActivity.class - encapsulates calling a class (a Different Activity)
             //startActivity(intent); // in-house method, starts new Activity, taking the Intent as an argument(starts instance of DisplayMessageActivity class)
 
-
             //Inflating the Popup using xml file
             popup_American.getMenuInflater().inflate(R.menu.menu_american, popup_American.getMenu());
 
@@ -251,9 +270,30 @@ public class DisplayCuisineActivity extends AppCompatActivity {
                     //Make Toast Message upon clicking Menu item
                     Toast.makeText(DisplayCuisineActivity.this,"You chose " + item.getTitle(),Toast.LENGTH_SHORT).show();
                     //Save first(restaurant) and second(food) item checkIndexes into an intent(putExtra, go to next Activity(customer?) to carry over intent
+                    if(addItemIntent == false)
+                    {
+                        //Intent intentPopup = new Intent(DisplayCuisineActivity.this, DisplayAmericanActivity.class);
+                        MenuItem item1 = item;
+                        //intentPopup.putExtra("restaurant_American", item1.getIntent());
+                        //intent.putExtra("restaurant_American", item1.getIntent());
+                        //intent.putExtras(intentPopup);
+                        Toast.makeText(DisplayCuisineActivity.this,"Added chosen Restaurant to Intent - addSECONDIntent is " + addItemIntent + " and item1 is " + item1.getTitle(),Toast.LENGTH_SHORT).show();
+                        addItemIntent = true;
+                        //Toast.makeText(DisplayCuisineActivity.this,intentPopup.getCharSequenceExtra("restaurant_American"),Toast.LENGTH_SHORT).show();
+                    }
+                    else if (addItemIntent == true){
+                        //Intent intentPopup = new Intent(DisplayCuisineActivity.this, DisplayAmericanActivity.class);
+                        MenuItem item2 = item;
+                        //intentPopup.putExtra("food_American", item2.getIntent());
+                        //intent.putExtra("food_American", item2.getIntent());
+                        //intent.putExtras(intentPopup);
+                        Toast.makeText(DisplayCuisineActivity.this,"Added chosen Restaurant to Intent - SECONDIntent added is " + addItemIntent + " and item2 is " + item2.getTitle(),Toast.LENGTH_SHORT).show();
+                        addItemIntent = false;
+                        next.setVisibility(Button.VISIBLE);
+                        next.setClickable(true);
+                    }
 
                     //subMenu(food_American, item_American1, item_American2, item_American3);
-
                     /*if(item_American1.isChecked())
                     {
                         //Submenu item arguments - (int) groupID, itemID, orderID, char or string itemTitle
@@ -277,9 +317,9 @@ public class DisplayCuisineActivity extends AppCompatActivity {
                     }*/
                     return true;
                 }
+
             });
             popup_American.show();
-            //just show this popup and call method for submenu check/initialize
         }else if (rb2.isChecked()){
             popup_Chinese.getMenuInflater().inflate(R.menu.menu_chinese, popup_Chinese.getMenu());
             popup_Chinese.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
@@ -304,6 +344,13 @@ public class DisplayCuisineActivity extends AppCompatActivity {
             popup_Mexican.show();
         }
     }
+
+    public void Customer (View view) {
+        //startActivity(intent); // in-house method, starts new Activity, taking the Intent as an argument(starts instance of DisplayMessageActivity class)
+    }
+    /*public void intentExtras (View view) {
+
+    }*/
 
     /*public void subMenu (SubMenu submenu, MenuItem item1, MenuItem item2, MenuItem item3)
     {
