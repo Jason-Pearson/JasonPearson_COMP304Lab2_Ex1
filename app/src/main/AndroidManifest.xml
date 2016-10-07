@@ -16,9 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".DisplayCuisineActivity" />
-        <activity android:name=".DisplayAmericanActivity" />
-        <activity android:name=".DisplayChineseActivity" />
-        <activity android:name=".DisplayMexicanActivity" />
+        <activity android:name=".CustomerActivity"></activity>
     </application>
 
 </manifest>
