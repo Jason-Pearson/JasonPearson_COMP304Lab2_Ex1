@@ -10,4 +10,67 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.jason.jasonpearson_comp304lab2_ex1.CustomerActivity">
 
+    <TextView
+        android:id="@+id/messageCustomer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Customer Information"
+        android:textAllCaps="true"
+        android:textSize="12pt"
+        />
+
+    <EditText
+        android:layout_below="@id/messageCustomer"
+        android:id="@+id/edit_Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your full name here...."
+        android:inputType="textPersonName"
+        android:maxLength="50"
+        />
+    <EditText
+        android:layout_below="@id/edit_Name"
+        android:id="@+id/edit_Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your email here...."
+        android:inputType="textEmailAddress"
+        android:maxLength="50"
+        />
+    <EditText
+        android:layout_below="@id/edit_Email"
+        android:id="@+id/edit_Address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your address here...."
+        android:inputType="textPostalAddress"
+        android:maxLength="50"
+        />
+    <EditText
+        android:layout_below="@id/edit_Address"
+        android:id="@+id/edit_Fav_Food"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your favourite food here...."
+        android:inputType="textShortMessage|textAutoCorrect"
+        android:maxLength="50"
+        />
+    <EditText
+        android:layout_below="@id/edit_Fav_Food"
+        android:id="@+id/edit_Fav_Chef"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your favourite chef here...."
+        android:inputType="textShortMessage|textAutoCorrect"
+        android:maxLength="50"
+        />
+
+<Button
+    android:id="@+id/order"
+    android:layout_below="@id/edit_Fav_Chef"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="ORDER"
+    android:onClick="Order"
+    />
 </RelativeLayout>

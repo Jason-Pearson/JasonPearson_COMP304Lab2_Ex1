@@ -1,18 +1,20 @@
 package com.example.jason.jasonpearson_comp304lab2_ex1;
 
-import android.content.ComponentName;
+//import android.content.ComponentName;
+
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.KeyEvent;
 import android.view.MenuItem;
-import android.view.SubMenu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.PopupMenu;
 import android.widget.RadioButton;
 import android.widget.Toast;
+
+//import android.graphics.drawable.Drawable;
+//import android.view.KeyEvent;
+//import android.view.SubMenu;
 public class DisplayCuisineActivity extends AppCompatActivity {
 /*
     //RadioGroup cuisineRG = (RadioGroup) findViewById(R.id.cuisineRG);
@@ -28,11 +30,14 @@ public class DisplayCuisineActivity extends AppCompatActivity {
     //Creating menu item instances - in order for sub menu of food items - have to make xml file for sub menu or can you mak in here?
     public boolean addItemIntent = false;
     //Intent intent = new Intent(DisplayCuisineActivity.this, DisplayAmericanActivity.class);
-    Intent intent = getIntent();
+    //Intent intent = getIntent();
 
     public final static String INTENT_KEY_CUISINE_CHOICE = "CUISINE.CHOICE";
-    public final static String INTENT_KEY_CUISINE_FOOD = "CUISINE.FOOD";
+    public final static String INTENT_KEY_CUISINE_FOOD1 = "CUISINE.FOOD1";
+    public final static String INTENT_KEY_CUISINE_FOOD2 = "CUISINE.FOOD2";
+
     private String cuisine = "";
+    private String restaurant = "";
     private String food = "";
 
     @Override
@@ -86,12 +91,13 @@ public class DisplayCuisineActivity extends AppCompatActivity {
         next.setVisibility(Button.INVISIBLE);
         next.setClickable(false);
         addItemIntent = false;
+        restaurant = "";
         food = "";
 
         final PopupMenu popup_American = new PopupMenu(DisplayCuisineActivity.this, select);
         final PopupMenu popup_Chinese = new PopupMenu(DisplayCuisineActivity.this, select);
         final PopupMenu popup_Mexican = new PopupMenu(DisplayCuisineActivity.this, select);
-
+/*
         final MenuItem item_American1 = (MenuItem) findViewById(R.id.one_American);
         final MenuItem item_American2 = (MenuItem) findViewById(R.id.two_American);
         final MenuItem item_American3 = (MenuItem) findViewById(R.id.three_American);
@@ -100,172 +106,8 @@ public class DisplayCuisineActivity extends AppCompatActivity {
         final MenuItem food_American1_2 = (MenuItem) findViewById(R.id.one_American_Food2);
         final MenuItem food_American1_3 = (MenuItem) findViewById(R.id.one_American_Food3);
 
-        final SubMenu food_American = new SubMenu() {
-            @Override
-            public SubMenu setHeaderTitle(int titleRes) {
-                return null;
-            }
-
-            @Override
-            public SubMenu setHeaderTitle(CharSequence title) {
-                return null;
-            }
-
-            @Override
-            public SubMenu setHeaderIcon(int iconRes) {
-                return null;
-            }
-
-            @Override
-            public SubMenu setHeaderIcon(Drawable icon) {
-                return null;
-            }
-
-            @Override
-            public SubMenu setHeaderView(View view) {
-                return null;
-            }
-
-            @Override
-            public void clearHeader() {
-
-            }
-
-            @Override
-            public SubMenu setIcon(int iconRes) {
-                return null;
-            }
-
-            @Override
-            public SubMenu setIcon(Drawable icon) {
-                return null;
-            }
-
-            @Override
-            public MenuItem getItem() {
-                return null;
-            }
-
-            @Override
-            public MenuItem add(CharSequence title) {
-                return null;
-            }
-
-            @Override
-            public MenuItem add(int titleRes) {
-                return null;
-            }
-
-            @Override
-            public MenuItem add(int groupId, int itemId, int order, CharSequence title) {
-                return null;
-            }
-
-            @Override
-            public MenuItem add(int groupId, int itemId, int order, int titleRes) {
-                return null;
-            }
-
-            @Override
-            public SubMenu addSubMenu(CharSequence title) {
-                return null;
-            }
-
-            @Override
-            public SubMenu addSubMenu(int titleRes) {
-                return null;
-            }
-
-            @Override
-            public SubMenu addSubMenu(int groupId, int itemId, int order, CharSequence title) {
-                return null;
-            }
-
-            @Override
-            public SubMenu addSubMenu(int groupId, int itemId, int order, int titleRes) {
-                return null;
-            }
-
-            @Override
-            public int addIntentOptions(int groupId, int itemId, int order, ComponentName caller, Intent[] specifics, Intent intent, int flags, MenuItem[] outSpecificItems) {
-                return 0;
-            }
-
-            @Override
-            public void removeItem(int id) {
-
-            }
-
-            @Override
-            public void removeGroup(int groupId) {
-
-            }
-
-            @Override
-            public void clear() {
-
-            }
-
-            @Override
-            public void setGroupCheckable(int group, boolean checkable, boolean exclusive) {
-
-            }
-
-            @Override
-            public void setGroupVisible(int group, boolean visible) {
-
-            }
-
-            @Override
-            public void setGroupEnabled(int group, boolean enabled) {
-
-            }
-
-            @Override
-            public boolean hasVisibleItems() {
-                return false;
-            }
-
-            @Override
-            public MenuItem findItem(int id) {
-                return null;
-            }
-
-            @Override
-            public int size() {
-                return 0;
-            }
-
-            @Override
-            public MenuItem getItem(int index) {
-                return null;
-            }
-
-            @Override
-            public void close() {
-
-            }
-
-            @Override
-            public boolean performShortcut(int keyCode, KeyEvent event, int flags) {
-                return false;
-            }
-
-            @Override
-            public boolean isShortcutKey(int keyCode, KeyEvent event) {
-                return false;
-            }
-
-            @Override
-            public boolean performIdentifierAction(int id, int flags) {
-                return false;
-            }
-
-            @Override
-            public void setQwertyMode(boolean isQwerty) {
-
-            }
-        };
+        final SubMenu food_American = new SubMenu();
+*/
         if (rb1.isChecked()) {
             //Intent intent = new Intent(this, DisplayAmericanActivity.class); // Intent - class object instance of class (Intent)- constructor takes two arguments (Context - this - for everything in the current Activity <Main>, Class - DisplayMessageActivity.class - encapsulates calling a class (a Different Activity)
             //startActivity(intent); // in-house method, starts new Activity, taking the Intent as an argument(starts instance of DisplayMessageActivity class)
@@ -283,7 +125,7 @@ public class DisplayCuisineActivity extends AppCompatActivity {
                     {
                         //Intent intentPopup = new Intent(DisplayCuisineActivity.this, DisplayAmericanActivity.class);
                         MenuItem item1 = item;
-                        food += item1.toString();
+                        restaurant += item1.toString();
                         //intentPopup.putExtra("restaurant_American", item1.getIntent());
                         //intent.putExtra("restaurant_American", item1.getIntent());
                         //intent.putExtras(intentPopup);
@@ -342,7 +184,7 @@ public class DisplayCuisineActivity extends AppCompatActivity {
                     {
                         //Intent intentPopup = new Intent(DisplayCuisineActivity.this, DisplayAmericanActivity.class);
                         MenuItem item1 = item;
-                        food += item1.toString();
+                        restaurant += item1.toString();
                         //intentPopup.putExtra("restaurant_American", item1.getIntent());
                         //intent.putExtra("restaurant_American", item1.getIntent());
                         //intent.putExtras(intentPopup);
@@ -400,7 +242,7 @@ public class DisplayCuisineActivity extends AppCompatActivity {
                     {
                         //Intent intentPopup = new Intent(DisplayCuisineActivity.this, DisplayAmericanActivity.class);
                         MenuItem item1 = item;
-                        food += item1.toString();
+                        restaurant += item1.toString();
                         //intentPopup.putExtra("restaurant_American", item1.getIntent());
                         //intent.putExtra("restaurant_American", item1.getIntent());
                         //intent.putExtras(intentPopup);
@@ -453,7 +295,8 @@ public class DisplayCuisineActivity extends AppCompatActivity {
     public void Customer (View view) {
         Intent intent = new Intent(DisplayCuisineActivity.this, CustomerActivity.class);
         intent.putExtra(INTENT_KEY_CUISINE_CHOICE, cuisine);
-        intent.putExtra(INTENT_KEY_CUISINE_FOOD, food);
+        intent.putExtra(INTENT_KEY_CUISINE_FOOD1, restaurant);
+        intent.putExtra(INTENT_KEY_CUISINE_FOOD2, food);
         startActivity(intent); // in-house method, starts new Activity, taking the Intent as an argument(starts instance of DisplayMessageActivity class)
     }
     /*public void intentExtras (View view) {
