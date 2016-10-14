@@ -45,30 +45,6 @@ public class Order extends AppCompatActivity {
         fav_food.setText(INTENT_EXTRAS_CUSTOMER_FAV_FOOD);
         fav_chef.setText(INTENT_EXTRAS_CUSTOMER_FAV_CHEF);
 
-/* - This is IF you have new views that aren't reference by anything pre-existing, to add into the layout
-        ViewGroup layout = (ViewGroup) findViewById(R.id.order_Activity); // create instance of ViewGroup called layout = via id of the layout via android:id in activity_display_message.xml file (casted as ViewGroup, to call addView() method - to add TextView message
-
-        layout.removeAllViews();
-        layout.addView(cuisine);
-        layout.addView(restaurant);
-        layout.addView(food);
-
-        layout.addView(name);
-        layout.addView(email);
-        layout.addView(address);
-        layout.addView(fav_food);
-        layout.addView(fav_chef);
-        /*
-        //make View object instances to post titles of menu item choices (I guess that's in Order class though)
-        TextView textView = new TextView(this); //create message TextView element
-        textView.setTextSize(40); //set its size (by pixels, width and length?)
-        textView.setText(INTENT_EXTRAS_CUISINE_CHOICE + INTENT_EXTRAS_CUISINE_FOOD); // set Text = equal string Message
-
-        //In order to add these object instances into the Customer class layout xml file
-        //In order to add TextView to this activity's layout - activity_display_message.xml
-        ViewGroup layout = (ViewGroup) findViewById(R.id.customer_Activity); // create instance of ViewGroup called layout = via id of the layout via android:id in activity_display_message.xml file (casted as ViewGroup, to call addView() method - to add TextView message
-        layout.addView(textView); //layout instance.calls addView(display TextView message View)
-*/
     }
 
     public void Reset(View view)
